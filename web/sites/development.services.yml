@@ -4,14 +4,18 @@
 # 'example.settings.local.php' file, which sits next to this file.
 parameters:
   http.response.debug_cacheability_headers: true
+  twig.config:
+    debug: false
+    auto_reload: true
+    cache: false
   cors.config:
     enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
-    allowedHeaders: ['content-type', 'authorization']
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin']
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
     allowedMethods: ['GET', 'POST']
     # Configure requests allowed from specific origins.
-    allowedOrigins: ['http://localhost:3000/']
+    allowedOrigins: ['*']
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.
