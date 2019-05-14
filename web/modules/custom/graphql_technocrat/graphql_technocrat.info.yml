@@ -1,0 +1,4 @@
+name: GraphQL Technocrat
+description: GraphQL examples for Drupal Camp Minsk.
+core: 8.x
+type: module
